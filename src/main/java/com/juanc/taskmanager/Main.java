@@ -1,3 +1,4 @@
+package com.juanc.taskmanager;
 import java.util.ArrayList;
 import java.util.Scanner;
 
