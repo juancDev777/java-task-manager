@@ -2,7 +2,7 @@
 
 # 
 
-# Simple CLI task manager built in Java.
+# Simple task manager built with Java.
 
 # 
 
@@ -24,27 +24,27 @@
 
 # \- Java
 
+# \- Maven
+
 # \- Git
 
-# \- GitHub
+# \- JUnit
 
 # 
 
-# \## How to Run
+# \## Project Structure
 
 # 
 
-# Compile:
+# src/main/java → application code  
+
+# src/test/java → unit tests  
 
 # 
 
-# javac \*.java
+# \## Author
 
 # 
 
-# Run:
-
-# 
-
-# java Main
+# Juan
 
