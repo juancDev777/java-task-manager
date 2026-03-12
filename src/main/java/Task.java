@@ -8,8 +8,8 @@ public class Task {
         this.completed = false;
     }
 
-    public void completeTask() {
-        completed = true;
+    public String toFileString() {
+        return title + "," + completed;
     }
 
     public void showTask() {
