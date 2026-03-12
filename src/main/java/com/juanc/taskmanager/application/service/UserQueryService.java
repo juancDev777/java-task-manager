@@ -16,6 +16,12 @@ public class UserQueryService {
 
     private final UserRepository userRepository;
 
+    public java.util.List<UserResponseDTO> getAllUsers() {
+        return userRepository.findAll().stream()
+                .map(this::mapToDTO)
+                .toList();
+    }
+
     public UserResponseDTO getUserById(UUID id) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found"));

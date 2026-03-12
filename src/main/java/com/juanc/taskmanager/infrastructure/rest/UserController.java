@@ -21,6 +21,11 @@ public class UserController {
     private final UserCommandService userCommandService;
     private final UserQueryService userQueryService;
 
+    @GetMapping
+    public ResponseEntity<java.util.List<UserResponseDTO>> getAllUsers() {
+        return ResponseEntity.ok(userQueryService.getAllUsers());
+    }
+
     @PostMapping
     public ResponseEntity<UserResponseDTO> registerUser(@Valid @RequestBody CreateUserCommand command) {
         UserResponseDTO response = userCommandService.handle(command);
