@@ -1,4 +1,4 @@
-import { User, CreateUserCommand, UpdateUserCommand } from './types';
+import type { User, CreateUserCommand, UpdateUserCommand } from './types.ts';
 
 const API_URL = 'http://localhost:8080/api/users';
 

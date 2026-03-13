@@ -1,10 +1,10 @@
 # User Management System
 
-A modern full-stack application built with **Java 21**, **Spring Boot**, **PostgreSQL**, and **React (TypeScript)**.
+A modern full-stack application built with **Java 21**, **Spring Boot**, **PostgreSQL**, and **Angular 18**.
 
 ## Architecture
 - **Backend**: DDD (Domain-Driven Design), CQRS (Command Query Responsibility Segregation), Service Layer.
-- **Frontend**: React with Vite, TypeScript, and modern Vanilla CSS.
+- **Frontend**: Angular 18 with standalone components, Reactive Forms, and modern Vanilla CSS.
 - **Database**: PostgreSQL (schema provided in `database/`).
 
 ## How to Run
@@ -21,7 +21,7 @@ A modern full-stack application built with **Java 21**, **Spring Boot**, **Postg
   mvn spring-boot:run
   ```
 
-### 3. Frontend (React)
+### 3. Frontend (Angular)
 - Navigate to the `frontend` folder:
   ```bash
   cd frontend
@@ -32,12 +32,12 @@ A modern full-stack application built with **Java 21**, **Spring Boot**, **Postg
   ```
 - Run the development server:
   ```bash
-  npm run dev
+  ng serve
   ```
-- Access the UI at `http://localhost:5173`.
+- Access the UI at `http://localhost:4200`.
 
 ## Features
 - User registration with real-time feedback.
-- User editing.
+- User editing and deletion.
 - Responsive and modern UI.
 - Global error handling and toast notifications.

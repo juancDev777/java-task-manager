@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import { User, CreateUserCommand } from './types';
-import { userService } from './userService';
+import type { User, CreateUserCommand } from './types.ts';
+import { userService } from './userService.ts';
 
 function App() {
   const [users, setUsers] = useState<User[]>([]);

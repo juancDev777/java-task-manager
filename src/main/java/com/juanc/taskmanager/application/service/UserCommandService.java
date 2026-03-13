@@ -1,6 +1,7 @@
 package com.juanc.taskmanager.application.service;
 
 import com.juanc.taskmanager.application.command.CreateUserCommand;
+import com.juanc.taskmanager.application.command.DeleteUserCommand;
 import com.juanc.taskmanager.application.command.UpdateUserCommand;
 import com.juanc.taskmanager.application.dto.UserResponseDTO;
 import com.juanc.taskmanager.domain.model.User;
@@ -48,6 +49,14 @@ public class UserCommandService {
         user.updateInfo(command.getName(), command.getEmail());
         User updatedUser = userRepository.save(user);
         return mapToDTO(updatedUser);
+    }
+
+    @Transactional
+    public void handle(DeleteUserCommand command) {
+        if (!userRepository.existsById(command.getId())) {
+            throw new RuntimeException("User not found");
+        }
+        userRepository.deleteById(command.getId());
     }
 
     private UserResponseDTO mapToDTO(User user) {

@@ -1,6 +1,7 @@
 package com.juanc.taskmanager.infrastructure.rest;
 
 import com.juanc.taskmanager.application.command.CreateUserCommand;
+import com.juanc.taskmanager.application.command.DeleteUserCommand;
 import com.juanc.taskmanager.application.command.UpdateUserCommand;
 import com.juanc.taskmanager.application.dto.UserResponseDTO;
 import com.juanc.taskmanager.application.service.UserCommandService;
@@ -45,5 +46,11 @@ public class UserController {
     public ResponseEntity<UserResponseDTO> getUser(@PathVariable UUID id) {
         UserResponseDTO response = userQueryService.getUserById(id);
         return ResponseEntity.ok(response);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteUser(@PathVariable UUID id) {
+        userCommandService.handle(new DeleteUserCommand(id));
+        return ResponseEntity.noContent().build();
     }
 }
