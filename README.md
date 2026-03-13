@@ -1,13 +1,32 @@
-# User Management System
+# 🚀 User Management System
 
 A modern full-stack application built with **Java 21**, **Spring Boot**, **PostgreSQL**, and **Angular 18**.
 
-## Architecture
-- **Backend**: DDD (Domain-Driven Design), CQRS (Command Query Responsibility Segregation), Service Layer.
-- **Frontend**: Angular 18 with standalone components, Reactive Forms, and modern Vanilla CSS.
-- **Database**: PostgreSQL (schema provided in `database/`).
+Aplicação **full-stack moderna** desenvolvida com **Java 21, Spring Boot, PostgreSQL e Angular 18**.
 
-## How to Run
+---
+
+## 🏗️ Architecture
+
+**Backend**
+* Java 21
+* Spring Boot
+* DDD (Domain-Driven Design)
+* CQRS (Command Query Responsibility Segregation)
+* Service Layer
+
+**Frontend**
+* Angular 18
+* Standalone Components
+* Reactive Forms
+* Vanilla CSS
+
+**Database**
+* PostgreSQL
+
+---
+
+## ⚙️ Running the Project
 
 ### 1. Database
 - Create a PostgreSQL database named `task_manager`.
@@ -35,6 +54,17 @@ A modern full-stack application built with **Java 21**, **Spring Boot**, **Postg
   ng serve
   ```
 - Access the UI at `http://localhost:4200`.
+
+---
+
+## 📁 Project Structure
+
+```
+java-task-manager   # Spring Boot backend
+frontend            # Angular frontend
+frontend-old        # React frontend (Deprecated)
+database            # SQL schema
+```
 
 ## Features
 - User registration with real-time feedback.
