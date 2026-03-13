@@ -26,7 +26,7 @@
            <input
              type="email"
              formControlName="email"
-             placeholder="john@example.com"
+             placeholder="john&#64;example.com"
            />
            <!-- MENSAGEM DE ERRO DO E-MAIL -->
            @if (userForm.get('email')?.invalid && userForm.get('email')?.touched) {
@@ -34,7 +34,7 @@
                  @if (userForm.get('email')?.errors?.['required']) {
                    O e-mail é obrigatório.
                    } @else {
-                   Digite um e-mail válido (ex: nome@email.com).
+                    Digite um e-mail válido (ex: nome&#64;email.com).
                    }
                </small>
            }
